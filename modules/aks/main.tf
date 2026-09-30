@@ -13,6 +13,12 @@ resource "azurerm_kubernetes_cluster" "this" {
     vnet_subnet_id  = var.aks_subnet_id
     os_disk_size_gb = var.os_disk_size_gb
     max_pods        = var.max_pods
+
+    upgrade_settings {
+      max_surge                     = "10%"
+      drain_timeout_in_minutes      = 0
+      node_soak_duration_in_minutes = 0
+    }
   }
 
   node_provisioning_profile {

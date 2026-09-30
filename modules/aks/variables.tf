@@ -77,12 +77,6 @@ variable "service_cidr" {
   default     = "10.0.0.0/16"
 }
 
-variable "docker_bridge_cidr" {
-  description = "Docker bridge CIDR"
-  type        = string
-  default     = "172.17.0.1/16"
-}
-
 variable "log_analytics_workspace_id" {
   description = "Log Analytics workspace id to connect OMS addon"
   type        = string

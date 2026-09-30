@@ -79,7 +79,7 @@ variable "node_count" {
 
 variable "node_vm_size" {
   type    = string
-  default = "standard_d2as_v4"
+  default = "Standard_D2pls_v6"
 }
 
 variable "os_disk_size_gb" {
@@ -110,11 +110,6 @@ variable "dns_service_ip" {
 variable "service_cidr" {
   type    = string
   default = "10.2.0.0/16"
-}
-
-variable "docker_bridge_cidr" {
-  type    = string
-  default = "172.17.0.1/16"
 }
 
 variable "linux_admin_username" {
